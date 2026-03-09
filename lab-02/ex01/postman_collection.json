@@ -1,0 +1,55 @@
+{
+  "info": {
+    "name": "Caesar Cipher API",
+    "_postman_id": "caesar-lab02",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Encrypt",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/caesar/encrypt",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "caesar", "encrypt"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"plain_text\": \"HUTECH\",\n  \"key\": 3\n}"
+        }
+      }
+    },
+    {
+      "name": "Decrypt",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/caesar/decrypt",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "caesar", "decrypt"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cipher_text\": \"KXWHFK\",\n  \"key\": 3\n}"
+        }
+      }
+    }
+  ]
+}
